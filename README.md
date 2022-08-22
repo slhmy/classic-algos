@@ -9,4 +9,6 @@ So I build this repository to record these algorithms to help me quickly underst
 - String matching
   - [KMP (The Knuth-Morris-Pratt Algorithm)](KMP)
 
+- Palindrome search
+  - [Manacher](Manacher)
 
