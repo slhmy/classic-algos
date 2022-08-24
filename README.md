@@ -12,3 +12,5 @@ So I build this repository to record these algorithms to help me quickly underst
 - Palindrome search
   - [Manacher](Manacher)
 
+- Sort
+  - [MergeSort](MergeSort)

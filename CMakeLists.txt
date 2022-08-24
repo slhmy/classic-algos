@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(manacher Manacher/manacher.cpp)
 add_executable(kmp KMP/kmp.cpp)
+add_executable(merge_sort MergeSort/merge_sort.cpp)
