@@ -14,3 +14,6 @@ So I build this repository to record these algorithms to help me quickly underst
 
 - Sort
   - [MergeSort](MergeSort)
+
+- Relationship derivation
+  - [UnionFind Set](UnionFindSet)
