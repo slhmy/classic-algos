@@ -17,3 +17,6 @@ So I build this repository to record these algorithms to help me quickly underst
 
 - Relationship derivation
   - [UnionFind Set](UnionFindSet)
+
+- Nearest Distance
+  - [Dijkstra](Dijkstra)
