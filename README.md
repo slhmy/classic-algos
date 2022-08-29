@@ -20,3 +20,6 @@ So I build this repository to record these algorithms to help me quickly underst
 
 - Nearest Distance
   - [Dijkstra](Dijkstra)
+
+- Data Structure
+  - [Binary Indexed Tree](BinaryIndexedTree)
