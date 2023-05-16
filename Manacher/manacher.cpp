@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <utility>
 
 using namespace std;
@@ -26,10 +27,11 @@ int manacherMaxLength(string raw) {
 
     // give an array to store the max radius you can get in pos `i`
     int radius[s.length()];
+    memset(radius, 0, sizeof radius);
     int refCenter = 0;
     int maxRadius = 0;
 
-    for (int i = 0; i < s.length(); i++) {
+    for (int i = 1; i < s.length(); i++) {
         // if `i` is in the reference palindrome
         if (i < refCenter + radius[refCenter])
             // if true, some pair check can be ignored by referencing the image palindrome on the other side
