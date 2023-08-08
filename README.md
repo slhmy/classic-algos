@@ -7,19 +7,19 @@ So I build this repository to record these algorithms to help me quickly underst
 ## Catalog
 
 - String matching
-  - [KMP (The Knuth-Morris-Pratt Algorithm)](KMP)
+  - [KMP (The Knuth-Morris-Pratt Algorithm)](src/KMP)
 
 - Palindrome search
-  - [Manacher](Manacher)
+  - [Manacher](src/Manacher)
 
 - Sort
-  - [MergeSort](MergeSort)
+  - [MergeSort](src/MergeSort)
 
 - Relationship derivation
-  - [UnionFind Set](UnionFindSet)
+  - [UnionFind Set](src/UnionFindSet)
 
 - Nearest Distance
-  - [Dijkstra](Dijkstra)
+  - [Dijkstra](src/Dijkstra)
 
 - Data Structure
-  - [Binary Indexed Tree](BinaryIndexedTree)
+  - [Binary Indexed Tree](src/BinaryIndexedTree)

@@ -11,6 +11,9 @@ const int arraySize = 5;
 
 int treeArray[arraySize + 1];
 
+// `x & (-x)` is a magic which helps you to
+// get the lowest `1` bit of `x`
+// see more in docs/bit-algos.md#complement
 inline int lowBit(int x) {
     return x & (-x);
 }

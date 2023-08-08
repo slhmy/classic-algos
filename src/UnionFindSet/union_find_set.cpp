@@ -2,7 +2,6 @@
 // Created by slhmy on 2022/8/27.
 //
 
-#include <vector>
 #include <iostream>
 
 using namespace std;
@@ -27,7 +26,7 @@ void init() {
 
 // `find` is the function we use when we want to get the root element of current set
 // we need to provide any one of the element in this set
-int find(int e) {
+int find(int e) { // NOLINT(*-no-recursion)
     // `parent[e] = find(parent[e])` do compress operation while finding the root
     // this will reduce the cost when another query occurs
     return e == parent[e] ? e : parent[e] = find(parent[e]);
