@@ -14,27 +14,33 @@ int treeArray[arraySize + 1];
 // `x & (-x)` is a magic which helps you to
 // get the lowest `1` bit of `x`
 // see more in docs/bit-algos.md#complement
-inline int lowBit(int x) {
+inline int lowBit(int x)
+{
     return x & (-x);
 }
 
-void add(int i, int val) {
-    while (i <= arraySize) {
+void add(int i, int val)
+{
+    while (i <= arraySize)
+    {
         treeArray[i] += val;
         i += lowBit(i);
     }
 }
 
-int getSum(int i) {
-   int sum = 0;
-   while (i > 0) {
-       sum += treeArray[i];
-       i -= lowBit(i);
-   }
-   return sum;
+int getSum(int i)
+{
+    int sum = 0;
+    while (i > 0)
+    {
+        sum += treeArray[i];
+        i -= lowBit(i);
+    }
+    return sum;
 }
 
-int main() {
+int main()
+{
     memset(treeArray, 0, sizeof treeArray);
     add(1, 1);
     cout << getSum(1) << endl;
@@ -43,4 +49,3 @@ int main() {
     cout << getSum(5) << endl;
     cout << getSum(4) << endl;
 }
-

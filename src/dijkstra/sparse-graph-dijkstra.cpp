@@ -17,11 +17,15 @@ const int nodeCount = 10;
 // adjacency table can save more memory space than adjacency list
 map<int, map<int, int>> fromToMap;
 
-void addEdge(int from, int to, int distance) {
+void addEdge(int from, int to, int distance)
+{
     // avoid multi edge distances for the same `from` & `to` nodes
-    if (fromToMap.count(from) && fromToMap[from].count(to)) {
+    if (fromToMap.count(from) && fromToMap[from].count(to))
+    {
         fromToMap[from][to] = min(fromToMap[from][to], distance);
-    } else {
+    }
+    else
+    {
         fromToMap[from][to] = distance;
     }
 
@@ -31,14 +35,17 @@ void addEdge(int from, int to, int distance) {
 // dijDistanceMap[i] record the nearest distance from the startNode to node `i`
 int dijDistanceMap[nodeCount];
 
-static bool compareDijDistance(const int &a, const int &b) {
+static bool compareDijDistance(const int &a, const int &b)
+{
     return dijDistanceMap[a] > dijDistanceMap[b];
 }
 
 // the strategy dijkstra algorithm used is
 // trigger distance update related with node `i` while dijDistanceMap[i] has changed
-void dijkstra() {
-    for (int & dijDistance : dijDistanceMap) {
+void dijkstra()
+{
+    for (int &dijDistance : dijDistanceMap)
+    {
         dijDistance = INT32_MAX;
     }
     dijDistanceMap[0] = 0;
@@ -50,11 +57,13 @@ void dijkstra() {
     memset(notNeedUpdate, false, sizeof notNeedUpdate);
 
     nearestDistanceQueue.push(0);
-    while (!nearestDistanceQueue.empty()) {
+    while (!nearestDistanceQueue.empty())
+    {
         int curToNode = nearestDistanceQueue.top();
         nearestDistanceQueue.pop();
 
-        if (notNeedUpdate[curToNode]) continue;
+        if (notNeedUpdate[curToNode])
+            continue;
 
         // if the node is used as a reference node
         // this indicates that it is currently the newest nearest distance
@@ -63,10 +72,12 @@ void dijkstra() {
 
         printf("Calculating with dijDistanceMap[%d]=%d\n", curToNode, dijDistanceMap[curToNode]);
 
-        for (auto & toNodeIt : fromToMap[curToNode]) {
+        for (auto &toNodeIt : fromToMap[curToNode])
+        {
             int newDistance = dijDistanceMap[curToNode] + toNodeIt.second;
             // check if dijDistance can be updated
-            if (dijDistanceMap[toNodeIt.first] > newDistance) {
+            if (dijDistanceMap[toNodeIt.first] > newDistance)
+            {
                 printf("Updating dijDistanceMap[%d]=%d according to Edge(%d, %d, %d)\n",
                        toNodeIt.first, newDistance, curToNode, toNodeIt.first, toNodeIt.second);
 
@@ -77,7 +88,8 @@ void dijkstra() {
     }
 }
 
-int main() {
+int main()
+{
     addEdge(0, 1, 1);
     addEdge(0, 2, 10);
     addEdge(1, 3, 100);
